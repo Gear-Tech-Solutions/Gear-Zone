@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearZone - Equipamentos e Objetos Táticos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">GEARZONE</div>
+        <nav>
+            <a href="#">NOVOS PRODUTOS</a>
+            <a href="#">OFERTAS ESPECIAIS</a>
+            <a href="#">CONTATO</a>
+        </nav>
+       <div class="search-bar">
+            <input type="text" placeholder="Buscar Item...">
+            <button>🔎</button>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <h1 class="section-title">EQUIPAMENTOS DE ALTO DESEMPENHO</h1>
+        
+        <div class="products-grid" id="product-list">
+    </div>
+
+                   
+            <div class="product-card">
+                <img src="sport-1-zenitco.jpg" alt="Objeto Tático de Exemplo">
+                <h2 class="product-name">Sport-1 Zenitco</h2>
+                <p class="product-sku">SKU: SPT1ZENIT01</p>
+                <p class="product-description">Desenvolvido para maior leveza e com material resistente. Corpo feito em filamento PETG. Pronto para o campo.</p>
+                
+                <div class="price-section">
+                    <span class="price-label">PREÇO:</span>
+                    <span class="product-price">R$ 180,00</span>
+                </div>
+                
+                <a href="https://wa.me/71992136934?text=INTERESSE: Sport-1 Zenitco (SKU SPT1ZENIT01) - R$ 180,00" target="_blank" class="buy-button">
+                    SOLICITAR PEDIDO (WHATSAPP)
+                </a>
+            </div>
+            <div class="product-card">
+                <img src="angle-grip-mini.jpg" alt="angle grip mini">
+                <h2 class="product-name">Grip Angular Mini</h2>
+                <p class="product-sku">SKU: GPAGL01</p>
+                <p class="product-description">Ergonomia tática e minimalista. Essencial para quem utiliza empunhaduras C-clamp e procura um ar mais tático na sua Airsoft.</p>
+                
+                <div class="price-section">
+                    <span class="price-label">PREÇO:</span>
+                    <span class="product-price">R$ 100,00</span>
+                </div>
+                
+                <a href="https://wa.me/71992136934?text=INTERESSE: Grip Angular Mini (SKU GPAGL01) - R$100,00" target="_blank" class="buy-button">
+                    SOLICITAR PEDIDO (WHATSAPP)
+                </a>
+            </div>
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GearZone. Todos os direitos reservados. Vendas apenas via WhatsApp.</p>
+    </footer>
+<script>
+    document.querySelector('.search-bar button').addEventListener('click', filterProducts);
+    document.querySelector('.search-bar input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            filterProducts();
+        }
+    });
+
+    function filterProducts() {
+        // 1. Pega o termo de busca e converte para minúsculas
+        const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+        
+        // 2. Pega todos os cartões de produto
+        const productList = document.getElementById('product-list');
+        const productCards = productList.getElementsByClassName('product-card');
+
+        // 3. Itera sobre cada cartão de produto
+        for (let i = 0; i < productCards.length; i++) {
+            const card = productCards[i];
+            
+            // Pega o texto completo do cartão (nome, descrição, SKU)
+            const cardText = card.textContent || card.innerText; 
+
+            // Verifica se o termo de busca está contido no texto do cartão
+            if (cardText.toLowerCase().includes(searchTerm)) {
+                card.style.display = ""; // Mostra o cartão
+            } else {
+                card.style.display = "none"; // Esconde o cartão
+            }
+        }
+    }
+</script>
+</body>
+</html>
+
+
