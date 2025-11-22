@@ -16,18 +16,17 @@
             <a href="#">OFERTAS ESPECIAIS</a>
             <a href="#">CONTATO</a>
         </nav>
-        <form class="search-bar" action="https://www.google.com/search" method="get" target="_blank">
-    <input type="hidden" name="q" value="site:gear-tech-solutions.github.io/Gear-Zone/">
-    
-    <input type="text" name="q" placeholder="Buscar Item..." required>
-    <button type="submit">🔎</button>
-        </form>
+       <div class="search-bar">
+            <input type="text" placeholder="Buscar Item...">
+            <button>🔎</button>
+        </div>
     </header>
 
     <main class="content-wrapper">
         <h1 class="section-title">EQUIPAMENTOS DE ALTO DESEMPENHO</h1>
         
-        <div class="products-grid">
+        <div class="products-grid" id="product-list">
+    </div>
 
                    
             <div class="product-card">
@@ -66,8 +65,40 @@
     <footer>
         <p>&copy; 2024 GearZone. Todos os direitos reservados. Vendas apenas via WhatsApp.</p>
     </footer>
+<script>
+    document.querySelector('.search-bar button').addEventListener('click', filterProducts);
+    document.querySelector('.search-bar input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            filterProducts();
+        }
+    });
 
+    function filterProducts() {
+        // 1. Pega o termo de busca e converte para minúsculas
+        const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+        
+        // 2. Pega todos os cartões de produto
+        const productList = document.getElementById('product-list');
+        const productCards = productList.getElementsByClassName('product-card');
+
+        // 3. Itera sobre cada cartão de produto
+        for (let i = 0; i < productCards.length; i++) {
+            const card = productCards[i];
+            
+            // Pega o texto completo do cartão (nome, descrição, SKU)
+            const cardText = card.textContent || card.innerText; 
+
+            // Verifica se o termo de busca está contido no texto do cartão
+            if (cardText.toLowerCase().includes(searchTerm)) {
+                card.style.display = ""; // Mostra o cartão
+            } else {
+                card.style.display = "none"; // Esconde o cartão
+            }
+        }
+    }
+</script>
 </body>
 </html>
+
 
 
