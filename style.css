@@ -80,29 +80,25 @@ nav a:hover {
 
 /* 2. Grid de Produtos */
 .products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;       /* <-- ATIVA A VISUALIZAÇÃO LADO A LADO */
+    flex-wrap: wrap;     /* Permite que os itens quebrem a linha */
+    justify-content: center; /* Centraliza os itens dentro do grid */
     gap: 30px;
-    padding: 0;
+    padding: 0; 
     margin-bottom: 50px;
 }
+/* 1. O Contêiner Principal Centralizado (para telas grandes) */
 .content-wrapper {
-    /* Define o limite para o bloco total de produtos e títulos */
     max-width: 1200px; 
-    
-    /* Centraliza o bloco na horizontal, usando a margem automática */
     margin: 0 auto; 
-    
-    /* Evita que o conteúdo cole nas bordas da tela */
     padding: 0 20px; 
 }
 /* Cartão de Produto Individual */
 .product-card {
-    background-color: #1a1a1a; /* Fundo do cartão escuro */
+   background-color: #1a1a1a;
     border: 1px solid #333;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 300px; /* Largura definida para caber lado a lado */
+    text-align: center;
     padding: 20px;
     width: 300px;
     text-align: center;
@@ -115,6 +111,7 @@ nav a:hover {
 }
 
 .product-card img {
+    max-width: 100;
     width: 100%;
     height: auto;
     max-height: 200px;
