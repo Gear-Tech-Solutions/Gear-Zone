@@ -87,7 +87,16 @@ nav a:hover {
     padding: 0 5%;
     margin-bottom: 50px;
 }
-
+.content-wrapper {
+    /* Define o limite para o bloco total de produtos e títulos */
+    max-width: 1200px; 
+    
+    /* Centraliza o bloco na horizontal, usando a margem automática */
+    margin: 0 auto; 
+    
+    /* Evita que o conteúdo cole nas bordas da tela */
+    padding: 0 20px; 
+}
 /* Cartão de Produto Individual */
 .product-card {
     background-color: #1a1a1a; /* Fundo do cartão escuro */
