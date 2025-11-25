@@ -10,12 +10,30 @@
 <body>
 
     <header class="navbar">
-        <div class="logo">GEARZONE</div>
+        <a href="index.html" class="logo-link">
+            <div class="logo">GEARZONE</div>
+        </a>
         <nav>
             <a href="index.html">PÁGINA INICIAL</a>
+            
+            <!-- INÍCIO: BOTÃO E MENU DE CATEGORIAS -->
+            <div class="dropdown">
+                <a href="#" class="dropbtn">CATEGORIAS ▼</a>
+                <div class="dropdown-content">
+                    <!-- Links para as novas páginas de categoria -->
+                    <a href="categoria-grips.html">GRIPS E VERTICAIS</a>
+                    <a href="categoria-acessorios.html">ACESSÓRIOS TÁTICOS</a>
+                    <a href="categoria-iluminacao.html">ILUMINAÇÃO</a>
+                    <a href="categoria-vestuario.html">VESTUÁRIO</a>
+                    <a href="categoria-protecao.html">PROTEÇÃO E ÓCULOS</a>
+                    <a href="categoria-pecas.html">PEÇAS INTERNAS</a>
+                </div>
+            </div>
+            <!-- FIM: BOTÃO E MENU DE CATEGORIAS -->
+            
             <a href="#">NOVOS PRODUTOS</a>
             <a href="#">OFERTAS ESPECIAIS</a>
-            <a href="contato.html" class="active">CONTATO</a>
+            <a href="contato.html">CONTATO</a>
         </nav>
        <div class="search-bar">
             <input type="text" placeholder="Buscar Item...">
@@ -26,8 +44,9 @@
     <main class="content-wrapper">
         <h1 class="section-title">EQUIPAMENTOS DE ALTO DESEMPENHO</h1>
         
+        <!-- CORRIGIDO: O products-grid agora envolve corretamente os cartões -->
         <div class="products-grid" id="product-list">
-                           
+        
             <div class="product-card">
                 <img src="sport-1-zenitco.jpg" alt="Objeto Tático de Exemplo">
                 <h2 class="product-name">Sport-1 Zenitco</h2>
@@ -43,6 +62,7 @@
                     SOLICITAR PEDIDO (WHATSAPP)
                 </a>
             </div>
+            
             <div class="product-card">
                 <img src="angle-grip-mini.jpg" alt="angle grip mini">
                 <h2 class="product-name">Grip Angular Mini</h2>
@@ -58,7 +78,8 @@
                     SOLICITAR PEDIDO (WHATSAPP)
                 </a>
             </div>
-            </div>
+            
+        </div>
     </main>
 
     <footer>
@@ -98,5 +119,3 @@
 </script>
 </body>
 </html>
-
-
