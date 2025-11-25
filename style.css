@@ -60,7 +60,7 @@ nav a:hover {
 .dropdown {
     position: relative; /* Pai para posicionar o menu */
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 /* Botão de Categoria - Mantenha o estilo do link */
@@ -252,3 +252,4 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
 }
+
