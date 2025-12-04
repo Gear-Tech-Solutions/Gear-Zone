@@ -48,7 +48,7 @@
             <!-- PRODUTO 1 -->
             <div class="product-card">
                 <img src="stark-style-angled.jpg" alt="stark style angled">
-                <h2 class="product-name">Starl Style Angled</h2>
+                <h2 class="product-name">Stark Style Angled</h2>
                 <p class="product-sku">SKU: MGSSA</p>
                 <p class="product-description">Ergonomia tática e minimalista. Essencial para quem utiliza empunhaduras C-clamp e procura um ar mais tático na sua Airsoft.</p>
                 
@@ -102,5 +102,38 @@
     <footer>
        <p>&copy; 2024 GearZone. Todos os direitos reservados. Vendas apenas via WhatsApp.</p>
     </footer>
+    <script>
+    document.querySelector('.search-bar button').addEventListener('click', filterProducts);
+    document.querySelector('.search-bar input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            filterProducts();
+        }
+    });
+
+    function filterProducts() {
+        // 1. Pega o termo de busca e converte para minúsculas
+        const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+        
+        // 2. Pega todos os cartões de produto
+        const productList = document.getElementById('product-list');
+        const productCards = productList.getElementsByClassName('product-card');
+
+        // 3. Itera sobre cada cartão de produto
+        for (let i = 0; i < productCards.length; i++) {
+            const card = productCards[i];
+            
+            // Pega o texto completo do cartão (nome, descrição, SKU)
+            const cardText = card.textContent || card.innerText; 
+
+            // Verifica se o termo de busca está contido no texto do cartão
+            if (cardText.toLowerCase().includes(searchTerm)) {
+                card.style.display = ""; // Mostra o cartão
+            } else {
+                card.style.display = "none"; // Esconde o cartão
+            }
+        }
+    }
+</script>
 </body>
 </html>
+
