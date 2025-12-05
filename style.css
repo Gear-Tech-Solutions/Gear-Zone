@@ -240,6 +240,16 @@ position: relative; /* ESSENCIAL para o link de clique por cima */
     font-weight: 700;
 }
 
+.card-link-overlay {
+    position:
+    absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
 /* Botão de Compra - Alto Contraste */
 .buy-button {
     display: block;
@@ -270,6 +280,7 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
 }
+
 
 
 
