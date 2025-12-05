@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport-1 Zenitco | Detalhes - GearZone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Adicionando ícones para as avaliações (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS ESPECÍFICO PARA A PÁGINA DE DETALHES */
+        .product-detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 40px 0;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .main-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border: 2px solid #333;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .thumbnail-gallery {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #444;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s, border-color 0.2s;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+            border-color: #cc0000;
+        }
+
+        .detail-name {
+            font-size: 2.2em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 10px;
+        }
+
+        .detail-price {
+            font-size: 2.5em;
+            color: #cc0000;
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .specs-table th, .specs-table td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .specs-table th {
+            background-color: #333;
+            color: #cc0000;
+            text-transform: uppercase;
+            width: 40%;
+        }
+
+        /* Seção de Avaliações */
+        .reviews-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        .review-card {
+            background-color: #333;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: gold;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail-container {
+                padding: 20px;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo-link">
+            <div class="logo">GEARZONE</div>
+        </a>
+        <nav>
+            <a href="index.html">PÁGINA INICIAL</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">CATEGORIAS ▼</a>
+                <div class="dropdown-content">
+                    <a href="categoria-grips.html">GRIPS E VERTICAIS</a>
+                    <a href="categoria-acessorios.html">ACESSÓRIOS TÁTICOS</a>
+                    <a href="categoria-iluminacao.html">ILUMINAÇÃO</a>
+                    <a href="categoria-vestuario.html">VESTUÁRIO</a>
+                    <a href="categoria-protecao.html">PROTEÇÃO E ÓCULOS</a>
+                    <a href="categoria-pecas.html">PEÇAS INTERNAS</a>
+                </div>
+            </div>
+            <a href="#">NOVOS PRODUTOS</a>
+            <a href="#">OFERTAS ESPECIAIS</a>
+            <a href="contato.html">CONTATO</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar Item...">
+            <button>🔎</button>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="product-detail-container">
+            
+            <!-- SEÇÃO DE GALERIA DE IMAGENS -->
+            <div class="gallery-section">
+                <!-- Imagem Principal (Substitua sport-1-zenitco-L.jpg pela imagem de alta resolução) -->
+                <img id="main-product-image" src="sport-1-zenitco.jpg" alt="Sport-1 Zenitco Visão Principal" class="main-image">
+                
+                <!-- Galeria de Miniaturas (Substitua com suas próprias imagens) -->
+                <div class="thumbnail-gallery">
+                    <img src="sport-1-zenitco.jpg" alt="Miniatura 1" class="thumbnail active" data-full-src="sport-1-zenitco.jpg">
+                    <img src="placeholder.jpg" alt="Miniatura 2" class="thumbnail" data-full-src="https://placehold.co/300x200/555555/ffffff?text=VISTA+LATERAL">
+                    <img src="placeholder2.jpg" alt="Miniatura 3" class="thumbnail" data-full-src="https://placehold.co/300x200/555555/ffffff?text=DETALHE+MATERIAIS">
+                </div>
+            </div>
+
+            <!-- SEÇÃO DE INFORMAÇÕES E COMPRA -->
+            <div class="info-section">
+                <p class="product-sku">SKU: SPT1ZENIT01</p>
+                <h1 class="detail-name">Sport-1 Zenitco - Handguard Tático</h1>
+                <p class="detail-price">R$ 180,00</p>
+                
+                <h2>DESCRIÇÃO DETALHADA</h2>
+                <p>O Handguard Sport-1 Zenitco é o acessório ideal para quem busca leveza e modularidade sem abrir mão da resistência. Usando tecnologia de impressão 3D de alta precisão, o corpo em PETG garante durabilidade e um encaixe perfeito.</p>
+                
+                <h2 style="margin-top: 30px;">INFORMAÇÕES DE FABRICAÇÃO E MATERIAL</h2>
+                <table class="specs-table">
+                    <tr>
+                        <th>Material Principal</th>
+                        <td>PETG (Poli-Tereftalato de Etileno Glicol) - Alta resistência e durabilidade térmica.</td>
+                    </tr>
+                    <tr>
+                        <th>Método de Produção</th>
+                        <td>Manufatura Aditiva (Impressão 3D de precisão)</td>
+                    </tr>
+                    <tr>
+                        <th>Tempo de Produção Médio</th>
+                        <td>2 a 3 dias úteis (A peça é feita sob demanda)</td>
+                    </tr>
+                    <tr>
+                        <th>Instalação</th>
+                        <td>Rápida, acompanha kit de parafusos M-LOK.</td>
+                    </tr>
+                </table>
+                
+                <!-- BOTÃO FINAL DE COMPRA -->
+                <a href="https://wa.me/71992136934?text=PEDIDO DE COMPRA: Sport-1 Zenitco (SKU SPT1ZENIT01) - R$ 180,00" target="_blank" class="buy-button" style="font-size: 1.2em; padding: 15px;">
+                    COMPRAR AGORA (FALE COM O VENDEDOR)
+                </a>
+            </div>
+        </div>
+
+        <!-- SEÇÃO DE AVALIAÇÕES -->
+        <div class="reviews-section">
+            <h1 class="section-title">AVALIAÇÕES E FEEDBACKS DE CLIENTES (2)</h1>
+            
+            <div class="review-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-weight: bold; color: #cc0000;">João A.</p>
+                <p>Produto superou as expectativas. Encaixe perfeito e o material é robusto. Chegou no prazo de 3 dias úteis.</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p style="font-weight: bold; color: #cc0000;">Mariana D.</p>
+                <p>Ótimo custo-benefício. O tempo de produção é um pouco longo, mas a qualidade final compensa a espera.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GearZone. Todos os direitos reservados. Vendas apenas via WhatsApp.</p>
+    </footer>
+
+    <!-- Script para trocar a imagem principal ao clicar na miniatura -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // 1. Troca a fonte da imagem principal
+                    mainImage.src = this.getAttribute('data-full-src');
+                    
+                    // 2. Remove o estado 'active' de todos os thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // 3. Adiciona o estado 'active' no thumbnail clicado
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
