@@ -158,6 +158,21 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
+/* ESTILO DO CARD INTERATIVO (NOVO) */
+.product-card {
+background-color: #1a1a1a;
+border: 1px solid #333;
+border-radius: 4px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+padding: 20px;
+width: 300px;
+text-align: center;
+transition: transform 0.3s, border-color 0.3s;
+/* ADIÇÕES PARA O CLIQUE: */
+cursor: pointer; /* Transforma o mouse em mãozinha */
+position: relative; /* ESSENCIAL para o link de clique por cima */
+}
+
 /* Cartão de Produto Individual */
 .product-card {
     background-color: #1a1a1a; /* Fundo do cartão escuro */
@@ -237,6 +252,9 @@ nav a:hover {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    /* ADIÇÕES PARA O CLIQUE: */
+    position: relative; 
+    z-index: 10; /* Garante que o botão fique ACIMA do link do card */
 }
 
 .buy-button:hover {
@@ -252,6 +270,7 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
 }
+
 
 
 
